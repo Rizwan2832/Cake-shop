@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Special Cakes for All Occasions</title>
+    <link rel="stylesheet" href="contactUS.css">
+    <script src="contactUS.js" defer></script>
+</head>
+<body>
+    <!--------------------------------NAVBAR-------------------------------------------------------------------------------->
+    <nav class="nav1">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Special Cakes Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUS.html" class="active">Contact</a></li>
+        </ul>
+        <img class="hamburger" src="images/hamburger.webp" alt="Menu" onclick="toggleSidebar()">
+    </nav>
+
+    <nav class="nav2">
+        <img src="images/close.png" alt="Close" class="close" onclick="toggleSidebar()">
+        <ul class="sideul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUS.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+<!-------------------------------------------MAIN-CODE------------------------------------------------------------------------------------>
+    <section id="contact" class="contact-section">
+        <h2>Get in touch with us</h2>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="bd794fcb-85f1-499b-b3c2-4a83a379016f">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+<!-----------------------------------FOOTER------------------------------------------------------------------------------------->
+    <footer>
+        <p>&copy; 2024 Special Cakes for All Occasions. All Rights Reserved.</p>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            alert('Form submitted successfully!');
+        });
+    
+        const nav2 = document.querySelector('.nav2');
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            nav2.style.display = 'flex';
+        });
+        document.querySelector('.close').addEventListener('click', function() {
+            nav2.style.display = 'none';
+        });
+    });
+    
+</script>
+</html>
