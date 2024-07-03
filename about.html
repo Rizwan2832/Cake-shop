@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Special Cakes for All Occasions</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="headfoot.css">
+</head>
+<body>
+    <!--------------------------------NAVBAR-------------------------------------------------------------------------------->
+    <nav class="nav1">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Special Cakes Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contactUS.html">Contact</a></li>
+        </ul>
+        <img class="hamburger" src="images/hamburger.webp" alt="Menu" onclick="toggleSidebar()">
+    </nav>
+
+    <nav class="nav2">
+        <img src="images/close.png" alt="Close" class="close" onclick="toggleSidebar()">
+        <ul class="sideul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contactUS.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-------------------------------------------MAIN-CODE------------------------------------------------------------------------------------>
+    <section id="about" class="about-section">
+        <h1>About Special Cakes for All Occasions</h1>
+        <p>Special Cakes for All Occasions started a year ago by the store owner, Sam Rice, who wanted to share their love of baking with the world. Come and taste all the delightful cakes!</p>
+        <img src="images/about-us.jpg" alt="About Us Image" class="about-img">
+        <h2>Job opportunities</h2>
+        <p>Come and work for us!</p>
+        <table class="jobs-table">
+            <tr>
+                <th>Job title</th>
+                <th>Job description</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>Pastry chef</td>
+                <td>Specialises in pastry desserts. Must have four years of experience.</td>
+                <td>$50,000 p.a.</td>
+            </tr>
+            <tr>
+                <td>Sales assistant</td>
+                <td>Serves customers in the shop and operates the cash register.</td>
+                <td>$25,000 p.a.</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--------------------------------------------------FOOTER---------------------------------------------------------------------->
+    <footer>
+        <p>&copy; 2024 Special Cakes for All Occasions</p>
+    </footer>
+</body>
+<script>
+    function toggleSidebar() {
+        const nav2 = document.querySelector('.nav2');
+        nav2.style.display = nav2.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+</html>
